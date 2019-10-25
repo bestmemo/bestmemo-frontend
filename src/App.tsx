@@ -32,6 +32,14 @@ const FrontSide = styled.div`
   font-size: 36px;
 `
 
+const Empty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #b2b2b2;
+`
+
 const Summary = styled.div`
   background: #f2f2f2;
   display: grid;
@@ -142,7 +150,7 @@ const App: React.FC = () => {
   )
 
   const content = current === null ? (
-    <BackSide>Nothing to review.</BackSide>
+    <Empty>今天没有单词需要复习了</Empty>
   ) : (
     review === null ? (
       <FrontSide>{current.front}</FrontSide>
